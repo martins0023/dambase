@@ -1,0 +1,49 @@
+{% extends "users/base.html" %}
+{% block content %}
+
+<!--start page -->
+<div class="responsive-bar"><i class="fa fa-bars"></i></div>
+			<a href="" class="user"><i class="fa fa-user"></i></a>
+			<a href="{% url 'login' %}" class="site-btn">Sign In</a>
+			<nav class="main-menu">
+				<ul class="menu-list">
+					<li><a href="">Solution</a></li>
+					<li><a href="">Features</a></li>
+					<li><a href="">News</a></li>
+					<li><a href="">About</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+    
+	<!-- Header section end -->
+
+<!-- Page info section -->
+<section class="page-info-section">
+    <div class="container">
+        <h2>Register</h2>
+        <div class="site-beradcamb">
+            <a href="">Home</a>
+            <span><i class="fa fa-angle-right"></i> Logout</span>
+        </div>
+    </div>
+</section>
+<!-- Page info end -->
+
+
+
+	<!-- Contact section -->
+	<section class="contact-page spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7">
+					<h4>You've been logged out, you think this is a mistake login <a href="{% url 'login' %}"><u>here</u>.</a> </h4>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- Contact section end -->
+
+{% endblock content%}

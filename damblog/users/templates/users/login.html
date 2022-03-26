@@ -1,0 +1,63 @@
+{% extends "users/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<!--start page -->
+<div class="responsive-bar"><i class="fa fa-bars"></i></div>
+			<a href="" class="user"><i class="fa fa-user"></i></a>
+			<a href="{% url 'register' %}" class="site-btn">Sign Up</a>
+			<nav class="main-menu">
+				<ul class="menu-list">
+					<li><a href="">Solution</a></li>
+					<li><a href="">Features</a></li>
+					<li><a href="">News</a></li>
+					<li><a href="">About</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+    
+	<!-- Header section end -->
+
+<!-- Page info section -->
+<section class="page-info-section">
+    <div class="container">
+        <h2>Register</h2>
+        <div class="site-beradcamb">
+            <a href="">Home</a>
+            <span><i class="fa fa-angle-right"></i> Sign In</span>
+        </div>
+    </div>
+</section>
+<!-- Page info end -->
+
+
+
+	<!-- Contact section -->
+	<section class="contact-page spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7">
+					<form method="post" class="contact-form">
+						{% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6">
+                            <fieldset class="form-group">
+                                <legend class="border-bottom mb-4">Login</legend>
+                                {{ form|crispy }}
+								<button type="submit"class="site-btn sb-gradients mt-4">Sign In</button>
+							</fieldset>
+							
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- Contact section end -->
+
+{% endblock content%}
